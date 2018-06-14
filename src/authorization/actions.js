@@ -1,7 +1,8 @@
 import { CHANGE_AUTH } from "./constants";
 
-export function changeAuth() {
+export function changeAuth(isLoggedIn) {
   return {
-    type: CHANGE_AUTH
+    type: CHANGE_AUTH,
+    isLoggedIn
   };
 }

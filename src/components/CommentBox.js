@@ -1,4 +1,5 @@
 import React from "react";
+import requireAuth from "../authorization/requireAuth";
 
 class CommentBox extends React.Component {
   render() {
@@ -6,4 +7,4 @@ class CommentBox extends React.Component {
   }
 }
 
-export default CommentBox;
+export default requireAuth(CommentBox);

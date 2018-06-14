@@ -1,13 +1,15 @@
 import { CHANGE_AUTH } from "./constants";
 
-export default function(state = { loggedIn: false }, action) {
+function authorizationReducer(state = { isLoggedIn: false }, action) {
   switch (action.type) {
     case CHANGE_AUTH:
       return {
-        loggedIn: !state.loggedIn
+        isLoggedIn: action.isLoggedIn
       };
 
     default:
       return state;
   }
 }
+
+export default authorizationReducer;
